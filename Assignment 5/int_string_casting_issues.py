@@ -7,7 +7,17 @@ hint: there's try/catch statements that i didn't teach but is somewhat straightf
 You can also go much much simpler if you want to, I just want you guys to keep practicing your google skills
 and ofc, if you're stuck, don't hesitate to email
 '''
+
+#not sure if this is what ur looking for
 def main():
-    intInput = int(input("Enter an int (but enter a string to see the error)"))
+    try:
+        intInput = int(input("Enter an int (but enter a string to see the error)"))
+    except ValueError as e:
+        print("You entered a string un able to cast to int")
+    else:
+        print(intInput,"sucessfully cast to int")
+    finally:
+        print("Casting process done")
+
     
 main()
